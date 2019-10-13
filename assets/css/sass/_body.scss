@@ -1,8 +1,25 @@
 .container {
   .left-column {
     background-color: $primary;
-    //color: $white;
+    color: $white;
+    padding: 1rem;
     width: 20%;
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    .filters {
+      cursor: pointer;
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: .2rem;
+      margin-bottom: .2rem;
+    }
+
+    .future {
+      margin-bottom: 1rem;
+    }
   }
 
   .main-content {
