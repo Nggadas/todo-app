@@ -1,0 +1,30 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  display:table;
+  list-style: none;
+  width:100%;
+  box-sizing:border-box;
+  li {
+    display:table-cell;
+  }
+}
+
+.container {
+  @include clear;
+  max-width: 768px;
+  margin: 0 auto;
+
+  &.header {
+    display: flex;
+    justify-content: space-between;
+  }
+}

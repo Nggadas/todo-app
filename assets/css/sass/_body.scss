@@ -1,11 +1,14 @@
 .container {
   .left-column {
     background-color: $primary;
+    box-sizing: border-box;
     color: $white;
+    float: left;
     padding: 1rem;
     width: 20%;
     h1 {
       font-size: 1.25rem;
+      margin: 0 0 .65rem 0;
     }
 
     .filters {
@@ -23,6 +26,61 @@
   }
 
   .main-content {
-    width: 70%;
+    box-sizing: border-box;
+    color: $darkgray;
+    float: left;
+    width: 80%;
+    h1 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .actions {
+      font-size: 1.25rem;
+      .add, .delete {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .add {
+        color: $primary;
+      }
+      .delete {
+        color: $danger;
+      }
+    }
+
+    .header {
+      background-color: $darkgray;
+      color: $white;
+      padding: .5rem 1rem;
+    }
+
+    .tasks {
+      padding: 1rem;
+      .details, .sub-tasks {
+        display: flex;
+        justify-content: space-between;
+        padding: .65rem 0;
+
+        .name {
+          font-size: .9rem;
+        }
+      }
+
+      .details {
+          border-bottom: 1px solid $gray;
+      }
+
+      .extra {
+        li {
+          padding: .65rem 1rem;
+          &:nth-child(even) {
+            background-color: $lightgray;
+          }
+        }
+      }
+    }
   }
 }

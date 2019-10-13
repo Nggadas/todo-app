@@ -1,5 +1,5 @@
+<h1>Filters</h1>
 <div class="future">
-    <h1>Filters</h1>
     <span class="filters" id="today">
         <i class="fa fa-calendar-day"></i>
         Today

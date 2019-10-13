@@ -1,7 +1,10 @@
 <header>
     <nav class="navbar">
         <div class="container header">
-            <a href="/" class="logo">TODO APP</a>
+            <a href="/" class="logo">
+                <i class="fa fa-tasks"></i>
+                TODO APP
+            </a>
             <div class="account">
                 <a href="#" class="link">Login or register</a>
             </div>
