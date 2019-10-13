@@ -12,7 +12,7 @@
     <div class="container">
         <form action="">
             <label for="create-task">
-                <input id="create-task" type="text" placeholder="Add new task" autocomplete="off" autofocus>
+                <input id="create-task" type="text" placeholder="Add new task" autocomplete="off">
             </label>
             <button id="submit-task">
                 Add

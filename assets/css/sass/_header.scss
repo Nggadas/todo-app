@@ -43,9 +43,12 @@ a {
     padding: .5rem 1rem;
     #create-task {
         box-sizing: border-box;
-        border: .2px solid $black;
-        width: calc(100% - 130px);
+        border: 1px solid $lightgray;
+        border-radius: 10px;
+        color: $darkgray;
+        font-size: .8rem;
         padding: .5rem 1rem;
+        width: calc(100% - 120px);
         &::placeholder {
             font-size: .8rem;
         }

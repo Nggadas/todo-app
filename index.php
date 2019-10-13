@@ -9,8 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Kalam|Lobster|Mansalva&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/fontawesome/all.min.css">
-    <script src="/assets/js/script.js"></script>
     <script src="/assets/js/fontawesome/all.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
     <title>TODO App</title>
 </head>
 <body>
@@ -20,7 +24,7 @@
             <?php include 'includes/left_column.php'?>
         </div>
         <div class="main-content">
-            <?php include 'includes/left_column.php'?>
+            <?php include 'includes/main_content.php'?>
         </div>
     </div>
 </body>
