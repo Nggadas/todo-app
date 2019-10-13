@@ -1,0 +1,62 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+
+    &.header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navbar {
+    background-color: $primary;
+    padding: .8rem 1rem;
+}
+
+.header {
+    .logo{
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'Kalam', cursive;
+    }
+
+    .link{
+         color: $white;
+         font-size: .9rem;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.create {
+    padding: .5rem 1rem;
+    #create-task {
+        box-sizing: border-box;
+        border: .2px solid $black;
+        width: calc(100% - 130px);
+        padding: .5rem 1rem;
+        &::placeholder {
+            font-size: .8rem;
+        }
+    }
+
+    #submit-task {
+        background-color: $primary;
+        border: 1px solid $primary;
+        border-radius: 50px;
+        color: $white;
+        font-size: .8rem;
+        padding: .6rem 2rem;
+    }
+}
