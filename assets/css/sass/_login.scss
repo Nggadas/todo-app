@@ -1,0 +1,31 @@
+#register {
+  box-sizing: border-box;
+  padding: 3rem 1rem ;
+  input {
+    display: block;
+    margin: .5rem 0;
+    &[type=text], &[type=password] {
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid $lightgray;
+      color: $gray;
+      font-size: .65rem;
+      font-weight: 600;
+      padding: .5rem 1rem;
+      width: 100%;
+    }
+  }
+  #register-btn, #login-btn {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .65rem 0;
+  }
+  label {
+    color: $darkgray;
+    font-size: .85rem;
+  }
+}

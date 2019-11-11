@@ -1,3 +1,6 @@
 $(document).ready(function () {
-    console.log("Working!");
+    $('#register').submit(function (event) {
+        event.preventDefault();
+        console.log("Bro!!!!!!");
+    })
 });

@@ -37,10 +37,20 @@
 
     .actions {
       font-size: 1.25rem;
-      .add, .delete {
+      .add, .delete, .done {
         cursor: pointer;
         &:hover {
           opacity: 0.8;
+        }
+
+        .checked {
+          color: $primary;
+        }
+
+        span {
+          &:not(:last-child) {
+            padding-right: .8rem;
+          }
         }
       }
       .add {
@@ -58,14 +68,22 @@
     }
 
     .tasks {
-      padding: 1rem;
+      padding: 1rem .25rem;
+      box-shadow: 0 0 10px $lightgray;
       .details, .sub-tasks {
         display: flex;
         justify-content: space-between;
-        padding: .65rem 0;
+        padding: .25rem 0;
 
         .name {
-          font-size: .9rem;
+          font-size: .8rem;
+        }
+
+        input[type='checkbox'] {
+          transform: scale(1.45);
+          &:checked {
+            color: blue;
+          }
         }
       }
 
@@ -74,10 +92,11 @@
       }
 
       .extra {
+        margin: 0;
         li {
-          padding: .65rem 1rem;
+          padding: .65rem .25rem .65rem 1rem;
           &:nth-child(even) {
-            background-color: $lightgray;
+            //background-color: $lightgray;
           }
         }
       }

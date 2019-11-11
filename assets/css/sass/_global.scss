@@ -18,6 +18,14 @@ ul {
   }
 }
 
+input[type=submit], button {
+  background-color: $primary;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
 .container {
   @include clear;
   max-width: 768px;
