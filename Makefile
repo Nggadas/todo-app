@@ -1,2 +1,2 @@
 theme:
-	sass sass/style.scss:style.css --watch --style=compressed
+	sass assets/css/sass/style.scss:assets/css/style.css --watch --style=compressed

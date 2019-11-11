@@ -1,31 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="/assets/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Kalam|Lobster|Mansalva&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome/all.min.css">
-    <script src="/assets/js/fontawesome/all.min.js"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script src="/assets/js/script.js"></script>
-    <title>TODO App</title>
-</head>
-<body>
-    <?php include 'includes/header.php'?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'?>
+<div class="create">
     <div class="container">
-        <div class="left-column">
-            <?php include 'includes/left_column.php'?>
-        </div>
-        <div class="main-content">
-            <?php include 'includes/main_content.php'?>
-        </div>
+        <form action="">
+            <label for="create-task">
+                <input id="create-task" type="text" placeholder="Add new task" autocomplete="off">
+            </label>
+            <button id="submit-task">
+                Add
+                <i class="fa fa-plus-circle"></i>
+            </button>
+        </form>
     </div>
-</body>
-</html>
+</div>
+<div class="container">
+    <div class="left-column">
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/left_column.php'?>
+    </div>
+    <div class="main-content">
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/content.php' ?>
+    </div>
+</div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php' ?>
