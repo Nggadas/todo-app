@@ -5,6 +5,10 @@ body {
 
 a {
   text-decoration: none;
+  color: royalblue;
+  &:hover {
+    color: $black;
+  }
 }
 
 ul {
@@ -24,6 +28,13 @@ input[type=submit], button {
   &:hover {
     background-color: $primary-hover;
   }
+}
+
+.error {
+  background-color: $danger;
+  color: $white;
+  padding: .65rem 1rem;
+  width: 100%;
 }
 
 .container {

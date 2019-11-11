@@ -1,4 +1,4 @@
-#register {
+#register, #login {
   box-sizing: border-box;
   padding: 3rem 1rem ;
   input {
@@ -24,8 +24,12 @@
     font-weight: 600;
     padding: .65rem 0;
   }
-  label {
+  label, span {
     color: $darkgray;
     font-size: .85rem;
   }
+}
+
+#register, #login {
+  padding-top: 0;
 }
