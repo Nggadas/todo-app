@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#login').submit(function (event) {
         event.preventDefault();
         const url = document.location.origin + "/includes/signin.php";
-        const form_data = $('#register').serialize();
+        const form_data = $('#login').serialize();
         const register = $.ajax({
             url: url,
             method: "POST",
@@ -10,9 +10,9 @@ $(document).ready(function () {
             beforeSend: btnLoading("#login-btn"),
             success: function (data) {
                 if (data === "success") {
-
+                    window.location.href = "/";
                 } else {
-                    $('#register > .error').html(data);
+                    $('#login > .error').html(data);
                     btnRest("#login-btn", "Login");
                 }
             }

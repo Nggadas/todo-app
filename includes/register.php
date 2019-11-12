@@ -1,5 +1,6 @@
 <?php
 include "connect.php";
+include "functions.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -9,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($username) && !empty($password)) {
         // Hash password using PASSWORD_BCRYPT
-        $password = password_hash($password, PASSWORD_BCRYPT);
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
         // Check that username is unique
         $query = "SELECT * FROM db_todoapp.users WHERE username = '". $username ."'";
@@ -19,14 +20,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo $username . " is taken, try something else.";
         } else {
             // Create insert query
-            $query = "INSERT INTO db_todoapp.users(username, password) VALUES ('". $username ."', '". $password ."')";
+            $query = "INSERT INTO db_todoapp.users(username, password) VALUES ('". $username ."', '". $hashed_password ."')";
 
             if (mysqli_query($connect, $query)) {
+                $user = getDetails($username, $password,$connect);
+
                 $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $username;
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
                 echo "success";
             } else {
-                echo "Error: " . $query . "<br>" . mysqli_error($connect);
+                echo "Something went wrong, try again";
+//                echo "Error: " . $query . "<br>" . mysqli_error($connect);
             }
             mysqli_close($connect);
         }
