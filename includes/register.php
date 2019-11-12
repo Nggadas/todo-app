@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = mysqli_real_escape_string($connect, $_POST["password"]);
 
     if (!empty($username) && !empty($password)) {
+        // Hash password using PASSWORD_BCRYPT
+        $password = password_hash($password, PASSWORD_BCRYPT);
 
         // Check that username is unique
         $query = "SELECT * FROM db_todoapp.users WHERE username = '". $username ."'";
@@ -22,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (mysqli_query($connect, $query)) {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
+                echo "success";
             } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($connect);
             }
