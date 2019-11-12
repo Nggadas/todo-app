@@ -30,13 +30,6 @@ input[type=submit], button {
   }
 }
 
-.error {
-  background-color: $danger;
-  color: $white;
-  padding: .65rem 1rem;
-  width: 100%;
-}
-
 .container {
   @include clear;
   max-width: 768px;
@@ -45,5 +38,19 @@ input[type=submit], button {
   &.header {
     display: flex;
     justify-content: space-between;
+  }
+
+  .error {
+    background-color: $danger;
+    box-sizing: border-box;
+    color: $white;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: .65rem 1rem;
+    width: 100%;
+    &:empty {
+      display: none;
+    }
   }
 }

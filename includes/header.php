@@ -25,7 +25,7 @@
                 <i class="fa fa-tasks"></i>
             </a>
             <div class="account">
-                <a href="log_in.php" class="link">Login or register</a>
+                <a href="signin.php" class="link">Login or register</a>
             </div>
         </div>
     </nav>

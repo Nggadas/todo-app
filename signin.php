@@ -2,8 +2,9 @@
 
 <div class="container">
     <?php include $_SERVER['DOCUMENT_ROOT'] . "/includes/connect.php"; ?>
-    <form id="login" action="log_in.php">
+    <form id="login" action="signin.php">
         <h4>Login</h4>
+        <span class="error"></span>
         <label for="username">
             Username:
         </label>
