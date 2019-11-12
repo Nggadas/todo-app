@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include "connect.php"?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +26,13 @@
                 <i class="fa fa-tasks"></i>
             </a>
             <div class="account">
-                <a href="signin.php" class="link">Login or register</a>
+                <?php
+                    if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+                        echo "<a href='logout.php' class='link'>Hello " . $_SESSION['username'] . ", logout</a>";
+                    } else {
+                        echo "<a href=\"signin.php\" class=\"link\">Login or register</a>";
+                    }
+                ?>
             </div>
         </div>
     </nav>

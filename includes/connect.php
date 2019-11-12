@@ -1,13 +1,13 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $dbname = "db_todoapp";
 $username = "root";
 $password = "root";
 
-try {
-    $conn = new PDO("mysql:host=$servername;$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+$connect = mysqli_connect($servername,$username,$password,$dbname);
+
+if (mysqli_connect_error()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }

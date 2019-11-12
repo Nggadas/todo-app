@@ -1,4 +1,11 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'?>
+<?php
+    include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+
+    if (!isset($_SESSION['loggedin']) && !$_SESSION['loggedin'] == true) {
+        header("Location: /signin.php");
+        die();
+    }
+?>
 <div class="create">
     <div class="container">
         <form action="">
