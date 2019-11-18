@@ -43,7 +43,7 @@
           opacity: 0.8;
         }
 
-        .checked {
+        &.checked {
           color: $primary;
         }
 
@@ -78,6 +78,10 @@
 
         .name {
           font-size: .75rem;
+          .eta {
+            color: $gray;
+            font-size: .65rem;
+          }
         }
 
         input[type='checkbox'] {
@@ -88,16 +92,18 @@
         }
       }
 
-      .details {
-          border-bottom: 1px solid $gray;
+      .task {
+        padding: .2rem 0;
       }
 
       .extra {
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
         margin: 0;
         li {
-          padding: .65rem .25rem .65rem 1rem;
-          &:nth-child(even) {
-            //background-color: $lightgray;
+          padding: .25rem .25rem .25rem 1rem;
+          &:not(:first-child) {
+            border-top: .1px solid $milk;
           }
         }
       }

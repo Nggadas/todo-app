@@ -30,7 +30,7 @@
     color: $darkgray;
     font-size: .8rem;
     padding: .5rem 1rem;
-    width: calc(100% - 285px);
+    width: calc(100% - 300px);
     &::placeholder {
       font-size: .8rem;
     }
@@ -40,7 +40,9 @@
     display: inline-block;
     #due-date {
       border: 1px solid $lightgray;
-      border-radius: 5px;
+      border-radius: 10px;
+      font-size: .75rem;
+      padding: .35rem .65rem;
       width: 10rem;
     }
 
