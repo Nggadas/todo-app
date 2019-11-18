@@ -40,7 +40,11 @@ $(document).ready(function () {
     });
     
     function btnLoading(id) {
-        $(id).attr("disabled", true).val("Working...");
+        if (id === "#login-btn") {
+            $(id).attr("disabled", true).val("Logging in...");
+        } else if (id === "#register-btn") {
+            $(id).attr("disabled", true).val("Registering...");
+        }
     }
 
     function btnRest(id, text) {

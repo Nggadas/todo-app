@@ -12,10 +12,15 @@
             <label for="create-task">
                 <input id="create-task" type="text" placeholder="Add new task" autocomplete="off">
             </label>
-            <button id="submit-task">
-                Add
-                <i class="fa fa-plus-circle"></i>
-            </button>
+            <div class="other">
+                <label for="due-date">
+                    <input id="due-date" type="date" title="Due date" autocomplete="off">
+                </label>
+                <button id="submit-task">
+                    Add
+                    <i class="fa fa-plus-circle"></i>
+                </button>
+            </div>
         </form>
     </div>
 </div>
