@@ -46,13 +46,11 @@
         &.checked {
           color: $primary;
         }
-
-        span {
-          &:not(:last-child) {
-            padding-right: .8rem;
-          }
-        }
       }
+      .done, .add {
+        padding-right: .2rem;
+      }
+
       .add {
         color: $primary;
       }

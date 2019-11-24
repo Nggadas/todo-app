@@ -16,6 +16,7 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/onLoad.js"></script>
     <title>TODO App</title>
 </head>
 <body>
