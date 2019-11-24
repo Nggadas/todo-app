@@ -8,13 +8,13 @@
 ?>
 <div class="create">
     <div class="container">
-        <form action="">
-            <label for="create-task">
-                <input id="create-task" type="text" placeholder="Add new task" autocomplete="off">
+        <form id="task" action="index.php">
+            <label for="task-name">
+                <input type="text" id="task-name" name="task_name" placeholder="Add new task" autocomplete="off">
             </label>
             <div class="other">
                 <label for="due-date">
-                    <input id="due-date" type="date" title="Due date" autocomplete="off">
+                    <input type="date" id="due-date" name="due_date" title="Due date" autocomplete="off">
                 </label>
                 <button id="submit-task">
                     Add
@@ -22,6 +22,7 @@
                 </button>
             </div>
         </form>
+        <span class="task error" style="margin-top: 1rem"></span>
     </div>
 </div>
 <div class="container">

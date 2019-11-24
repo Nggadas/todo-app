@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $query = "INSERT INTO db_todoapp.users(username, password) VALUES ('". $username ."', '". $hashed_password ."')";
 
             if (mysqli_query($connect, $query)) {
-                $user = getDetails($username, $password,$connect);
+                $user = getDetails($username, $password, $connect);
 
                 $_SESSION['loggedin'] = true;
                 $_SESSION['id'] = $user['id'];

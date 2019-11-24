@@ -44,13 +44,14 @@ input[type=submit], button {
     background-color: $danger;
     box-sizing: border-box;
     color: $white;
-    display: block;
+    display: none;
+    font-size: .8rem;
     font-weight: 600;
     margin-bottom: 1rem;
     padding: .65rem 1rem;
     width: 100%;
-    &:empty {
-      display: none;
+    &.show {
+      display: block;
     }
   }
 }

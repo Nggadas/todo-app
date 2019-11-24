@@ -1,5 +1,5 @@
 <?php
-
+// Retrieve and return user data
 function getDetails ($username, $password, $connect) {
     $query = "SELECT * FROM db_todoapp.users WHERE username = '" . $username . "'";
     $result = mysqli_query($connect, $query);
@@ -11,5 +11,19 @@ function getDetails ($username, $password, $connect) {
         } else {
             echo 'Something went wrong with password, try again.';
         }
+    }
+    return null;
+}
+
+// Retrieve and return todo tasks
+function getTasks ($connect) {
+    $query = "SELECT * FROM db_todoapp.tasks";
+    $result = mysqli_query($connect, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        return $data;
+    } else {
+        return null;
     }
 }
