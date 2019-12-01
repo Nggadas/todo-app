@@ -2,7 +2,7 @@
 include "connect.php";
 include "functions.php";
 
-$tasks = getTasks($connect);
+$tasks = getCompletedTasks($connect);
 
 if ($tasks == null) {
     echo "empty";

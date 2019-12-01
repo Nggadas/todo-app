@@ -37,7 +37,7 @@
 
     .actions {
       font-size: 1.25rem;
-      .add, .delete, .done {
+      .add, .delete, .complete {
         cursor: pointer;
         &:hover {
           opacity: 0.8;
@@ -47,8 +47,14 @@
           color: $primary;
         }
       }
-      .done, .add {
+      .complete, .add {
         padding-right: .2rem;
+      }
+
+      .complete {
+        * {
+          pointer-events: none;
+        }
       }
 
       .add {

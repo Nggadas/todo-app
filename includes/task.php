@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($task_name) && !empty($due_date)) {
             // Create insert query
-            $query = "INSERT INTO db_todoapp.tasks(name, due_date, status) VALUES ('" . $task_name . "', '" . $due_date . "', '" . $status . "')";
+            $query = "INSERT INTO db_todoapp.tasks(name, due_date, status, user_id) VALUES ('" . $task_name . "', '" . $due_date . "', '" . $status . "', '" . $_SESSION['id'] . "')";
 
             if (mysqli_query($connect, $query)) {
                 echo json_encode(getTasks($connect));
