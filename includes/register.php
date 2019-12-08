@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $user['username'];
                 echo "success";
             } else {
-                echo "Something went wrong, try again";
-//                echo "Error: " . $query . "<br>" . mysqli_error($connect);
+//                echo "Something went wrong, try again";
+                echo "Error: " . $query . "<br>" . mysqli_error($connect);
             }
             mysqli_close($connect);
         }
