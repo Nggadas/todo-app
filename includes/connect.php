@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$dbname = "db_todoapp";
-$username = "root";
-$password = "root";
+$servername = $_ENV["SEVER_NAME"];
+$dbname = $_ENV["DB_NAME"];
+$username = $_ENV["USERNAME"];
+$password = $_ENV["PASSWORD"];
 
 $connect = mysqli_connect($servername,$username,$password,$dbname);
 
